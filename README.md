@@ -1,6 +1,6 @@
 # Editor override plugin
 
-This is the Wordpress plugin, with which you can 'override' Wordpress' TinyMCE's WYSIWYG and text editor.
+This is a Wordpress plugin, with which you can 'override' Wordpress' TinyMCE's WYSIWYG and text editor.
 
 The settings for this plugin can be found under Settings > Editor settings.
 
