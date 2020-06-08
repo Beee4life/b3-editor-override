@@ -1,0 +1,9 @@
+table.editor-settings td {
+    vertical-align: top;
+    padding-right:  2em;
+}
+
+.editor-override-dashboard ul {
+    list-style:  disc;
+    margin-left: 17px;
+}
