@@ -59,12 +59,6 @@
              */
             function b3_plugin_activation() {
 
-                $row1_options = [
-                    'bold',
-                    'italic',
-                    'bullist',
-                    'numlist',
-                ];
                 $html_options = [
                     'strong',
                     'em',
@@ -73,9 +67,15 @@
                     'ol',
                     'li',
                 ];
+                $row1_options = [
+                    'bold',
+                    'italic',
+                    'bullist',
+                    'numlist',
+                ];
 
-                update_option( 'editor_row1_options', $row1_options, true );
                 update_option( 'editor_html_options', $html_options, true );
+                update_option( 'editor_row1_options', $row1_options, true );
             }
 
             /**
