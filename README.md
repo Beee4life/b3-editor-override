@@ -80,13 +80,13 @@ function b3_quicktags() {
 add_action( 'admin_print_scripts', 'my_custom_quicktags' );
 ```
 
-my-custom-quicktags.js could contain something like the following for an html tag:
+b3-quicktags.js could contain something like the following for an html tag:
 
 ```
 edButtons[edButtons.length] = new edButton( 'h3', 'h3', '<h3>', '</h3>' );
 ``` 
 
-my-custom-quicktags.js could contain something like the following for the `[embed]` shortcode:
+b3-quicktags.js could contain something like the following for the `[embed]` shortcode:
 
 ```
 edButtons[edButtons.length] = new edButton( 'embed', 'embed', '[embed]', '[/embed]' );
