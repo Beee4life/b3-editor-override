@@ -2,7 +2,7 @@
     /*
         Plugin Name:      B3 - Editor Override
         Description:      Override editor toolbar buttons for the WYSIWYG/HTML editor.
-        Version:          0.5
+        Version:          1.0
         Author:           Beee
         Author URI:       https://berryplasman.com
         Text Domain:      b3-editor
@@ -24,7 +24,7 @@
                 // vars
                 $this->settings = array(
                     'path'    => trailingslashit( dirname( __FILE__ ) ),
-                    'version' => '0.4',
+                    'version' => '1.0',
                 );
 
                 register_activation_hook(__FILE__,      array( $this, 'b3_plugin_activation' ) );
@@ -117,7 +117,7 @@
             /**
              * TinyMCE: First line toolbar customizations
              *
-             * @https://www.kevinleary.net/customizing-tinymce-wysiwyg-editor-wordpress/
+             * @src: https://www.kevinleary.net/customizing-tinymce-wysiwyg-editor-wordpress/
              *
              * @param $buttons
              *
@@ -161,7 +161,7 @@
             /**
              * Modify TinyMCE editor to override formats.
              *
-             * @https://www.jowaltham.com/modify-tinymce-editor/
+             * @src: https://www.jowaltham.com/modify-tinymce-editor/
              */
             public function b3_tinymce_remove_unused_formats( $options ) {
                 $block_format_options = get_option( 'editor_format_options' );
