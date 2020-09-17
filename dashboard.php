@@ -27,7 +27,7 @@
             </p>
 
             <form name="settings" action="" method="post">
-                <input name="b3_settings_nonce" type="hidden" value="<?php echo wp_create_nonce( 'b3-settings-nonce' ); ?>"/>
+                <input name="b3eo_settings_nonce" type="hidden" value="<?php echo wp_create_nonce( 'b3eo-settings-nonce' ); ?>"/>
 
                 <table class="editor-settings">
                     <tr>

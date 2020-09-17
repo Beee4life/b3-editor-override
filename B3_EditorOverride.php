@@ -210,8 +210,8 @@
              * Store settings
              */
             function b3_store_form_settings() {
-                if ( isset( $_POST[ 'b3_settings_nonce' ] ) ) {
-                    if ( ! wp_verify_nonce( $_POST[ 'b3_settings_nonce' ], 'b3-settings-nonce' ) ) {
+                if ( isset( $_POST[ 'b3eo_settings_nonce' ] ) ) {
+                    if ( ! wp_verify_nonce( $_POST[ 'b3eo_settings_nonce' ], 'b3eo-settings-nonce' ) ) {
                         // @TODO: throw error
                         return;
                     } else {
