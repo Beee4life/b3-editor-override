@@ -1,4 +1,4 @@
-# Editor override plugin
+# B3 Editor override plugin
 
 This is a Wordpress plugin, with which you can 'override' Wordpress' TinyMCE's WYSIWYG and text editor.
 
