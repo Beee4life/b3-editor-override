@@ -1,6 +1,6 @@
 <?php
     /*
-        Plugin Name:      B3 - Editor Override
+        Plugin Name:      B3 Editor Override
         Description:      Override editor toolbar buttons for the WYSIWYG/HTML editor.
         Version:          1.0
         Author:           Beee
@@ -215,6 +215,7 @@
                         // @TODO: throw error
                         return;
                     } else {
+                        $redirect_url = '';
                         delete_option( 'editor_format_options' );
                         delete_option( 'editor_row1_options' );
                         delete_option( 'editor_row2_options' );
@@ -256,6 +257,10 @@
                         if ( isset( $_POST[ 'html' ] ) && ! empty( $_POST[ 'html' ] ) ) {
                             update_option( 'editor_html_options', $_POST[ 'html' ], true );
                         }
+
+                        $redirect_url = add_query_arg( 'updated', 'true' );
+                        wp_safe_redirect( $redirect_url );
+                        exit;
                     }
                 }
             }

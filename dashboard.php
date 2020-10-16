@@ -17,7 +17,7 @@
 
         <div class="wrap editor-override-dashboard">
 
-            <h1><?php _e( 'Editor settings', 'b3-editor' ); ?></h1>
+            <h1><?php _e( 'B3 Editor settings', 'b3-editor' ); ?></h1>
 
             <p>
                 <?php esc_html_e( 'Here you can select which options will be allowed in the visual/text editor.', 'b3-editor' ); ?>
