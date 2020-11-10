@@ -206,7 +206,6 @@
                         // @TODO: throw error
                         return;
                     } else {
-                        $redirect_url = '';
                         delete_option( 'editor_format_options' );
                         delete_option( 'editor_row1_options' );
                         delete_option( 'editor_row2_options' );
