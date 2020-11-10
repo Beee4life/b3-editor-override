@@ -33,7 +33,6 @@
                 // actions
                 add_action( 'admin_menu',               array( $this, 'b3_add_admin_pages' ) );
                 add_action( 'admin_enqueue_scripts',    array( $this, 'b3_enqueue_scripts_backend' ) );
-                add_action( 'admin_print_scripts',      array( $this, 'b3_custom_quicktags' ) );
 
                 // filters
                 add_filter( 'mce_buttons',              array( $this, 'b3_override_editor_mce_buttons_row1' ) );
@@ -45,14 +44,6 @@
                 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ),  array( $this, 'b3_override_settings_link' ) );
             }
 
-
-            function b3_custom_quicktags() {
-                wp_enqueue_script(
-                    'b3_custom_quicktags',
-                    plugin_dir_url( __FILE__ ) . '/assets/js/quicktags.js',
-                    array( 'quicktags' )
-                );
-            }
 
             /**
              * Preset settings when plugin is activated
