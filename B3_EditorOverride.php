@@ -1,7 +1,7 @@
 <?php
     /*
         Plugin Name:      B3 Editor Override
-        Description:      Override editor toolbar buttons for the WYSIWYG/HTML editor.
+        Description:      Override editor toolbar buttons for the (classic) WYSIWYG/HTML editor.
         Version:          1.1.0
         Author:           Beee
         Author URI:       https://berryplasman.com
