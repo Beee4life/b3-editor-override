@@ -56,7 +56,7 @@ add_filter( 'mce_buttons_2', 'b3_custom_toolbar_row2', 11 );
 <a name="quicktags"></a>
 ### Quicktags
 
-Ever since WordPress introduced [Quicktags](https://codex.wordpress.org/Quicktags_API), people have been wanting to customize them. Naturally, a lot of tutorials popped up, demonstrating how to do this. The problem is that all of them require that you edit quicktags.js, a file in WordPress.
+Ever since WordPress introduced [Quicktags](https://codex.wordpress.org/Quicktags_API), people have been wanting to customize them. Naturally, a lot of tutorials popped up, demonstrating how to do this. The problem is that a lot of them require that you edit quicktags.js, a file in WordPress.
 
 You can easily do so by creating a simple custom plugin with 1 function.
 
