@@ -2,7 +2,7 @@
     /*
         Plugin Name:      B3 Editor Override
         Description:      Override editor toolbar buttons for the WYSIWYG/HTML editor.
-        Version:          1.0
+        Version:          1.1.0
         Author:           Beee
         Author URI:       https://berryplasman.com
         Text Domain:      b3-editor
@@ -24,7 +24,7 @@
                 // vars
                 $this->settings = array(
                     'path'    => trailingslashit( dirname( __FILE__ ) ),
-                    'version' => '1.0',
+                    'version' => '1.1.0',
                 );
 
                 register_activation_hook(__FILE__,      array( $this, 'b3_plugin_activation' ) );
