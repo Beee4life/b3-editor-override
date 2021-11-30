@@ -2,9 +2,9 @@
     /*
         Plugin Name:      B3 - Add shortcodes dropdown
         Description:      Adds a select/dropdown in the WYSIWYG editor toolbar
-        Version:          0.1
+        Version:          1.0
         Author:           Berry Plasman
-        Author URI:       https://www.berryplasman.com
+        Author URI:       https://berryplasman.com
     */
 
     /**

@@ -1,4 +1,4 @@
-# Editor override plugin
+# B3 Editor override plugin
 
 This is a Wordpress plugin, with which you can 'override' Wordpress' TinyMCE's WYSIWYG and text editor.
 
@@ -56,7 +56,7 @@ add_filter( 'mce_buttons_2', 'b3_custom_toolbar_row2', 11 );
 <a name="quicktags"></a>
 ### Quicktags
 
-Ever since WordPress introduced [Quicktags](https://codex.wordpress.org/Quicktags_API), people have been wanting to customize them. Naturally, a lot of tutorials popped up, demonstrating how to do this. The problem is that all of them require that you edit quicktags.js, a file in WordPress.
+Ever since WordPress introduced [Quicktags](https://codex.wordpress.org/Quicktags_API), people have been wanting to customize them. Naturally, a lot of tutorials popped up, demonstrating how to do this. The problem is that a lot of them require that you edit quicktags.js, a file in WordPress.
 
 You can easily do so by creating a simple custom plugin with 1 function.
 
@@ -80,13 +80,13 @@ function b3_quicktags() {
 add_action( 'admin_print_scripts', 'my_custom_quicktags' );
 ```
 
-my-custom-quicktags.js could contain something like the following for an html tag:
+b3-quicktags.js could contain something like the following for an html tag:
 
 ```
 edButtons[edButtons.length] = new edButton( 'h3', 'h3', '<h3>', '</h3>' );
 ``` 
 
-my-custom-quicktags.js could contain something like the following for the `[embed]` shortcode:
+b3-quicktags.js could contain something like the following for the `[embed]` shortcode:
 
 ```
 edButtons[edButtons.length] = new edButton( 'embed', 'embed', '[embed]', '[/embed]' );

@@ -1,8 +1,9 @@
 <?php
     /*
-        Plugin Name:      B3 - Editor Override
-        Description:      Override editor toolbar buttons for the WYSIWYG/HTML editor.
-        Version:          0.5
+        Plugin Name:      B3 Editor Override
+        Plugin URI:       https://github.com/Beee4life/b3-editor-override
+        Description:      Override editor toolbar buttons for the (classic) WYSIWYG/HTML editor.
+        Version:          1.0.0
         Author:           Beee
         Author URI:       https://berryplasman.com
         Text Domain:      b3-editor
@@ -24,7 +25,7 @@
                 // vars
                 $this->settings = array(
                     'path'    => trailingslashit( dirname( __FILE__ ) ),
-                    'version' => '0.4',
+                    'version' => '1.0.0',
                 );
 
                 register_activation_hook(__FILE__,      array( $this, 'b3_plugin_activation' ) );
@@ -33,7 +34,6 @@
                 // actions
                 add_action( 'admin_menu',               array( $this, 'b3_add_admin_pages' ) );
                 add_action( 'admin_enqueue_scripts',    array( $this, 'b3_enqueue_scripts_backend' ) );
-                add_action( 'admin_print_scripts',      array( $this, 'b3_custom_quicktags' ) );
 
                 // filters
                 add_filter( 'mce_buttons',              array( $this, 'b3_override_editor_mce_buttons_row1' ) );
@@ -45,14 +45,6 @@
                 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ),  array( $this, 'b3_override_settings_link' ) );
             }
 
-
-            function b3_custom_quicktags() {
-                wp_enqueue_script(
-                    'b3_custom_quicktags',
-                    plugin_dir_url( __FILE__ ) . '/assets/js/quicktags.js',
-                    array( 'quicktags' )
-                );
-            }
 
             /**
              * Preset settings when plugin is activated
@@ -117,7 +109,7 @@
             /**
              * TinyMCE: First line toolbar customizations
              *
-             * @https://www.kevinleary.net/customizing-tinymce-wysiwyg-editor-wordpress/
+             * @src: https://www.kevinleary.net/customizing-tinymce-wysiwyg-editor-wordpress/
              *
              * @param $buttons
              *
@@ -161,7 +153,7 @@
             /**
              * Modify TinyMCE editor to override formats.
              *
-             * @https://www.jowaltham.com/modify-tinymce-editor/
+             * @src: https://www.jowaltham.com/modify-tinymce-editor/
              */
             public function b3_tinymce_remove_unused_formats( $options ) {
                 $block_format_options = get_option( 'editor_format_options' );
@@ -210,8 +202,8 @@
              * Store settings
              */
             function b3_store_form_settings() {
-                if ( isset( $_POST[ 'b3_settings_nonce' ] ) ) {
-                    if ( ! wp_verify_nonce( $_POST[ 'b3_settings_nonce' ], 'b3-settings-nonce' ) ) {
+                if ( isset( $_POST[ 'b3eo_settings_nonce' ] ) ) {
+                    if ( ! wp_verify_nonce( $_POST[ 'b3eo_settings_nonce' ], 'b3eo-settings-nonce' ) ) {
                         // @TODO: throw error
                         return;
                     } else {
@@ -256,6 +248,10 @@
                         if ( isset( $_POST[ 'html' ] ) && ! empty( $_POST[ 'html' ] ) ) {
                             update_option( 'editor_html_options', $_POST[ 'html' ], true );
                         }
+
+                        $redirect_url = add_query_arg( 'updated', 'true' );
+                        wp_safe_redirect( $redirect_url );
+                        exit;
                     }
                 }
             }
